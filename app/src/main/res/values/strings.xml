@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Completalo-Miguel</string>
+    <string name="numero_de_filas">Numero de Filas :</string>
+    <string name="numero_de_columnas">Numero de Columnas :</string>
+    <string name="numero_de_colores">Numero de Colores :</string>
+    <string name="colores">Colores</string>
+    <string name="numeros">Numeros</string>
+    <string name="sonido">Sonido</string>
+    <string name="vibracion">Vibracion</string>
+    <string name="a_jugar">¡A jugar!</string>
+</resources>

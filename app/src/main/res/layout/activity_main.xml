@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFilas"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/numero_de_filas"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/sbNumeroFilas"
+        style="@android:style/Widget.Material.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:max="6"
+        android:min="3"
+        android:progress="3" />
+
+        <TextView
+            android:id="@+id/tvColumnas"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/numero_de_columnas"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    <SeekBar
+        android:id="@+id/sbNumeroColumnas"
+        style="@android:style/Widget.Material.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:max="6"
+        android:min="3"
+        android:progress="3" />
+
+        <TextView
+            android:id="@+id/tvColor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/numero_de_colores"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    <SeekBar
+        android:id="@+id/sbNumeroColores"
+        style="@android:style/Widget.Material.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:max="6"
+        android:min="2"
+        android:progress="3" />
+
+        <RadioGroup
+            android:id="@+id/rgSeleccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbColores"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
+                android:text="@string/colores" />
+
+            <RadioButton
+                android:id="@+id/rbNumeros"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
+                android:text="@string/numeros" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sonido" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/vibracion" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnComenzar"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/a_jugar" />
+</LinearLayout>
