@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Completalo-Miguel</string>
-    <string name="numero_de_filas">Numero de Filas :</string>
-    <string name="numero_de_columnas">Numero de Columnas :</string>
-    <string name="numero_de_colores">Numero de Colores :</string>
+    <string name="numero_de_filas">Numero de Filas : 3</string>
+    <string name="numero_de_columnas">Numero de Columnas : 3</string>
+    <string name="numero_de_colores">Numero de Colores : 2</string>
     <string name="colores">Colores</string>
     <string name="numeros">Numeros</string>
     <string name="sonido">Sonido</string>
