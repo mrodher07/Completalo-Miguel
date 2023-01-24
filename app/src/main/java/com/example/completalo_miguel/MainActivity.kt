@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var progresoX: TextView
     private lateinit var progresoY: TextView
+    private lateinit var progresoColores: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -21,7 +22,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.sbNumeroColumnas.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-
                 updateXTiles(seekBar?.getProgress()!!)
             }
 
@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.sbNumeroFilas.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-
                 updateYTiles(seekBar?.getProgress()!!)
             }
 
@@ -41,6 +40,15 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
 
+        binding.sbNumeroColores.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                updateColores(seekBar?.getProgress()!!)
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
 
     }
     /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -57,6 +65,11 @@ class MainActivity : AppCompatActivity() {
     fun updateYTiles(progreso:Int) {
         progresoY = binding.tvFilas
         progresoY.setText("Numero de Filas : " + progreso)
+    }
+
+    fun updateColores(progreso:Int) {
+        progresoColores = binding.tvColor
+        progresoColores.setText("Numero de Colores : " + progreso)
     }
 
 }
