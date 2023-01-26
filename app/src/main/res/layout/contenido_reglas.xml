@@ -11,6 +11,7 @@
         android:id="@+id/tvTituloReglas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:text="@string/tituloReglas"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -20,7 +21,8 @@
     <TextView
         android:id="@+id/tvContenidoReglas"
         android:layout_width="match_parent"
-        android:layout_height="237dp"
+        android:layout_height="151dp"
+        android:padding="10dp"
         android:text="@string/contenidoReglas"
         android:textAlignment="viewStart"
         android:textSize="16dp" />

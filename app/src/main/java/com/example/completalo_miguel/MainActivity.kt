@@ -1,5 +1,6 @@
 package com.example.completalo_miguel
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -61,12 +62,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.menuReglas->{
-                val bottomSheet = exampleBottomSheet(R.layout.contenido_reglas)
-                bottomSheet.show(supportFragmentManager, bottomSheet.tag)
+                mostrarHowTo()
             }
 
             R.id.menuAcercaDe->{
-
+                mostrarAbout()
             }
 
             R.id.menuConfig->{
@@ -94,6 +94,57 @@ class MainActivity : AppCompatActivity() {
     fun mostrarHowTo(){
         val bottomSheet = exampleBottomSheet(R.layout.contenido_reglas)
         bottomSheet.show(supportFragmentManager, bottomSheet.tag)
+    }
+
+    fun mostrarAbout(){
+        val bottomSheet = exampleBottomSheet(R.layout.contenido_acerca_de)
+        bottomSheet.show(supportFragmentManager, bottomSheet.tag)
+    }
+
+    fun startPlay(){
+        val enviar = Intent(this, GameField::class.java)
+
+        var elegir:String
+        if(binding.rbNumeros.isChecked){
+            elegir = "Numeros"
+        }else{
+            elegir = "Colores"
+        }
+
+        if(binding.sbNumeroFilas.progress<3){
+            enviar.putExtra("cantidadFilas", 3)
+        }else{
+            enviar.putExtra("cantidadFilas", binding.sbNumeroFilas.progress)
+        }
+
+        if(binding.sbNumeroColumnas.progress<3){
+            enviar.putExtra("cantidadColumnas", 3)
+        }else{
+            enviar.putExtra("cantidadColumnas", binding.sbNumeroColumnas.progress)
+        }
+
+        if(binding.sbNumeroColores.progress<3){
+            enviar.putExtra("tramas", 3)
+        }else{
+            enviar.putExtra("tramas", binding.sbNumeroColores.progress)
+        }
+
+        enviar.putExtra("elegir", elegir)
+
+        if(binding.cbSonido.isChecked){
+            enviar.putExtra("sonido", binding.cbSonido.toString())
+        }else{
+            enviar.putExtra("sonido", false)
+        }
+
+        if(binding.cbVibracion.isChecked){
+            enviar.putExtra("vibracion", binding.cbVibracion.toString())
+        }else{
+            enviar.putExtra("vibracion", false)
+        }
+
+        startActivity(enviar)
+
     }
 
 }

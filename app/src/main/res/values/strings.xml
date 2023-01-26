@@ -10,4 +10,6 @@
     <string name="a_jugar">¡A jugar!</string>
     <string name="tituloReglas">REGLAS</string>
     <string name="contenidoReglas">El juego consiste en un tablero cuyo tamaño ha sido dado por el usuario con una cantidad de colores tambien dada por el usuario. Además el usuario puede decir que quiere que se muestre, si colores o numeros, junto con la posibilidad de que el juego reproduzca sonido y vibración.</string>
+    <string name="tituloAcercaDe">Acerca De</string>
+    <string name="contenidoAcercaDe">Hecho por: Miguel Rodríguez Hernández miguelroher2002@gmail.com</string>
 </resources>

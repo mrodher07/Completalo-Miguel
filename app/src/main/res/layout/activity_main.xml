@@ -89,14 +89,14 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/cbSonido"
                 android:layout_width="119dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/sonido" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/cbVibracion"
                 android:layout_width="156dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
