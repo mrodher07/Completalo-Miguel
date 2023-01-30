@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
 
+        binding.btnComenzar.setOnClickListener{
+            startPlay()
+        }
+
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         var inflater: MenuInflater = menuInflater
@@ -106,9 +110,9 @@ class MainActivity : AppCompatActivity() {
 
         var elegir:String
         if(binding.rbNumeros.isChecked){
-            elegir = "Numeros"
+            elegir = "numeros"
         }else{
-            elegir = "Colores"
+            elegir = "colores"
         }
 
         if(binding.sbNumeroFilas.progress<3){
