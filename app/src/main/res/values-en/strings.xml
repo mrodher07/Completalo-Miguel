@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Time:</string>
+    <string name="numero_de_filas">Number of Rows : 3</string>
+    <string name="numero_de_columnas">Number of Columns : 3</string>
+    <string name="numero_de_colores">Number of Colors : 2</string>
+    <string name="colores">Colors</string>
+    <string name="numeros">Numbers</string>
+    <string name="sonido">Sound</string>
+    <string name="vibracion">Vibration</string>
+    <string name="a_jugar">¡Play!</string>
+    <string name="tituloReglas">RULES</string>
+    <string name="contenidoReglas">"The game consists of a board whose size has been given by the user with a number of colors also given by the user. In addition, the user can say that he wants it to be shown, whether colors or numbers, along with the possibility that the game plays sound and vibration.  "</string>
+    <string name="tituloAcercaDe">About</string>
+    <string name="contenidoAcercaDe">Made by: Miguel Rodriguez Hernandez</string>
+    <string name="tvFelicidades">CONGRATULATIONS</string>
+    <string name="tvNumClicks">Number of Clicks:</string>
+    <string name="tvNumTiempo">"Time: "</string>
+</resources>
